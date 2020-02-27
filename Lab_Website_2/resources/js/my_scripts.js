@@ -134,19 +134,22 @@ function loadStatsPage(){
 
 function loadPlayersPage(){
 	var choice = document.getElementById("player_selector");
-	var p1 =  document.createElement('p1');
-	p1.innerHTML = "fdsa";
-	p1.onclick= switchPlayers(0);
-	
-	choice.append("pn");
-	choice.append("dsa");
 
-	/*for(i = 0; counter < pn; counter++)
-	{	var p1 =  document.createElement('p1');
+	//p1.onclick= switchPlayers(0);
+	var pn = players.length;
+	var i = 0;
+
+	/*var p1 =  document.createElement("option");
+		p1.innerHTML = "players[i].name";
+		//p1.onclick = switchPlayers(i);
+		choice.appendChild(p1);*/
+
+	for(i = 0; i < pn; i++)
+	{	var p1 =  document.createElement("option");
 		p1.innerHTML = players[i].name;
-		p1.onclick = switchPlayers(i);
+		p1.onclick= switchPlayers(i);
 		choice.appendChild(p1);
-	}*/
+	}
 }				
 		
 /*		switchPlayers(playerNum) method:
